@@ -1,4 +1,4 @@
-mobf_settings_version = "0.0.3"
+mobf_settings_version = "0.0.4"
 
 if type(inventory_plus.register_button) == "function" then
 	minetest.register_on_joinplayer(function(player)
@@ -277,11 +277,11 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     end
     
     if fields.mobf_enable_spawning then
-        minetest.setting_set("mobf_disable_animal_spawning","true")
+        minetest.setting_set("mobf_disable_animal_spawning","false")
     end
     
     if fields.mobf_disable_spawning then
-        minetest.setting_set("mobf_disable_animal_spawning","false")
+        minetest.setting_set("mobf_disable_animal_spawning","true")
     end
         
     if fields.mobf_enable_3dmode then
@@ -293,11 +293,11 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     end
     
     if fields.mobf_enable_secondary_spawning then
-        minetest.setting_set("mobf_animal_spawning_secondary","false")
+        minetest.setting_set("mobf_animal_spawning_secondary","true")
     end
     
     if fields.mobf_disable_secondary_spawning then
-        minetest.setting_set("mobf_animal_spawning_secondary","true")
+        minetest.setting_set("mobf_animal_spawning_secondary","false")
     end
     
     if fields.mobf_restart_required or
